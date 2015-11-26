@@ -1,4 +1,4 @@
-/* Enter your code here. Read input from STDIN. Print output to STDOUT */
+package SuccessfactorsPractice;/* Enter your code here. Read input from STDIN. Print output to STDOUT */
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;

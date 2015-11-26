@@ -1,4 +1,4 @@
-package CodeReview;
+package SuccessfactorsPractice.CodeReview;
 
 import java.io.*;
 

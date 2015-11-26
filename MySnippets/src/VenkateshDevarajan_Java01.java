@@ -24,6 +24,6 @@ List down assumptions made.
 
 public class VenkateshDevarajan_Java01 {
 	
-	S
+
 
 }
