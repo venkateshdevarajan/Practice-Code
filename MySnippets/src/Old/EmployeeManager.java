@@ -35,6 +35,8 @@ public class EmployeeManager {
 		
 		//showAllManagers(e6);
 		showAllMyReportees(e4,empList);
+
+        //empList.remove(e4);
 	}
 	
 	private static void showAllManagers(EmployeeManager employee){		
