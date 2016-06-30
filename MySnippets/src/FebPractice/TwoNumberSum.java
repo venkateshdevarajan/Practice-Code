@@ -5,27 +5,32 @@ import java.util.HashMap;
 
 /**
  * Created by venkatesh.d on 06/02/16.
+ *
+ * 0,1
+ * 3,-2
+ *
  */
 public class TwoNumberSum {
 
     // sum of 2 numbers = given x
     public static void main(String[] args){
         int[] arr = {1, -2, 3,6};
-        int sum = 4,diff;
+        int sum = 1,diff;
         HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
 
         for(int i=0;i<arr.length;i++){
             diff = sum - arr[i];
             if(map.containsKey(arr[i])){
                 //return true;
+                System.out.println("True: "+arr[i]+"+"+map.get(arr[i]));
             }
             else{
                 map.put(diff,arr[i]);
             }
         }
         //return false;
-        System.out.println(returnSmallestCharacter());
-        contiguousSubMaxSum();
+        //System.out.println(returnSmallestCharacter());
+        //contiguousSubMaxSum();
     }
 
     static char returnSmallestCharacter(){
@@ -60,19 +65,21 @@ public class TwoNumberSum {
     }
 
     static void contiguousSubMaxSum(){
-        int[] arr = {1, 2, -4, 1, 3, -2, 3, -1};
-        int max = 0,sum=0;
+        int[] arr = {-9, 3, 2, -1, 4, 5, 3, -1};
+        int max = 0,sum=0,i1=-1,j1=-1;
+
 
         for(int i=0;i<arr.length;i++){
             sum = sum + arr[i];
             if(sum < 0){
                 sum = 0;
+                i1=i+1;
             }
-            if(max < sum)
-                max = sum;
+            if(max < sum){
+                max = sum;j1=i;}
         }
 
-        System.out.println("Max:"+max);
+        System.out.println("Max:"+max+""+i1+""+j1);
     }
 
     static int distanceBetweenWords(ArrayList<String> inputString,String a, String b) {

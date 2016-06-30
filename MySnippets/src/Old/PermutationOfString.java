@@ -12,10 +12,14 @@ public class PermutationOfString {
 	
 	protected static void permutation(String prefix,String str){
 		int length = str.length();
-		if(length==0) System.out.println(prefix);
-		for(int i=0;i<length;i++){
-			permutation(prefix+str.charAt(i),str.substring(0, i) + str.substring(i+1, length));
-		}
+        if(length==0) System.out.println(prefix);
+		if(length>0) {
+            for (int i = 0; i < length; i++) {
+                permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i + 1, length));
+                //System.out.println(prefix+str.charAt(i)+"**"+((str.substring(0, i) + str.substring(i+1, length))));
+            }
+        }
+       // if(length==0) System.out.println(prefix);
 	}
 
 }
